@@ -19,7 +19,10 @@ public class Main {
         start(scanner);
 
         scanner.close();
-    }
+
+
+        };
+
 
 
     private static void start(Scanner scanner) {
@@ -57,7 +60,7 @@ public class Main {
 
             boolean checkPlayerInput = choosePosition(gameBoard, playerPosition, PLAYER);
             while (!checkPlayerInput) {
-                System.out.println("Position is taken. Please choose a correct position: ");
+                System.out.println("Position is taken or input is out of the range");
                 playerPosition = scanner.nextInt();
                 checkPlayerInput = choosePosition(gameBoard, playerPosition, PLAYER);
             }
@@ -177,7 +180,6 @@ public class Main {
                 }
                 break;
             default:
-                System.out.println("Invalid Position");
                 break;
         }
         return false;
